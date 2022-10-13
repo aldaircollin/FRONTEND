@@ -1,0 +1,46 @@
+<div class="card bg-light">
+    <h5 class="card-header">{{titulo}}</h5>
+    <div class="card-body">
+      <form (ngSubmit) = "crearProveedor()">
+        <div class="row mb-3">
+          <label for="apellido" class="col-sm-2 col-form-label">NOMBRES</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Ingrese Nombres" [(ngModel)]="proveedor.nombre" name="nombre">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">APELLIDOS</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Apellidos" [(ngModel)]="proveedor.apellidos" name="categoria">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">DIRECCION</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Direccion" [(ngModel)]="proveedor.direccion" name="categoria">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">TELEFONO</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Telefono" [(ngModel)]="proveedor.telefono" name="categoria">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">CORREO</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Correo" [(ngModel)]="proveedor.email" name="categoria">
+            </div>
+          </div>
+  
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button">Cancelar</button>
+            <button class="btn btn-primary" role="button">Registrar</button>
+          </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+      Lista de Proveedores </div>
+    <div class="card-body">
+        <a class="btn btn-primary" [routerLink]="['/proveedor/registrar']">Registrar nuevo</a>
+      <table class="table caption-top">
+        <caption></caption>
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NOMBRE</th>
+            <th scope="col">APELLIDOS</th>
+            <th scope="col">DIRECCION</th>
+            <th scope="col">TELEFONO</th>
+            <th scope="col">CORREO</th>
+            <th scope="col">ACCIONES</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor= "let proveedores of proveedor">
+            <td>{{proveedores.id}}</td>
+            <td>{{proveedores.nombre}}</td>
+            <td>{{proveedores.apellidos}}</td>
+            <td>{{proveedores.direccion}}</td>
+            <td>{{proveedores.telefono}}</td>
+            <td>{{proveedores.email}}</td>
+            <td>
+              <button (click)= "verDetallesDelProveedor(proveedores.id)" class="btn btn-primary" style="margin-left : 10px;">Detalles</button>
+              <button (click)= "actualizarProveedor(proveedores.id)" class="btn btn-info">Editar</button>
+               <button (click)= "eliminarProveedor(proveedores.id)" class="btn btn-danger" style="margin-left : 10px;">Eliminar</button>
+               
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

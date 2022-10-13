@@ -1,0 +1,48 @@
+<div class="card bg-light">
+    <h3 class="text-center">Edición de Productos</h3>
+    <div class="card-body">
+    <form (ngSubmit)= "onSubmit()" #proveedorForm = "ngForm">
+     
+        <div class="row mb-3">
+          <label for="apellido" class="col-sm-2 col-form-label">NOMBRES</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Ingrese Nombre del Producto" [(ngModel)]="proveedor.nombre" name="nombre">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="edad" class="col-sm-2 col-form-label">APELLIDOS</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Ingrese Categoria" [(ngModel)]="proveedor.apellidos" name="apellidos">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">DIRECCION</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Precio" [(ngModel)]="proveedor.direccion" name="direccion">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">TELEFONO</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Cantidad" [(ngModel)]="proveedor.telefono" name="telefono">
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">EMAIL</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Ingrese Cantidad" [(ngModel)]="proveedor.email" name="email">
+            </div>
+          </div>
+  
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button" [routerLink]="['/proveedor']">Cancelar</button>
+            <button class="btn btn-primary" role="button"><i class="fa fa-trash" aria-hidden="true">Guardar</i></button>
+            
+          </div>
+      </form>
+    </div>
+  </div>
+  
